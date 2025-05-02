@@ -21,7 +21,8 @@
 
 ### Демонстрація порушення через "use-after-free", коли об’єкт передається у бібліотечну функцію (`pow`) після звільнення.
 
-`root@05e0866c1272:/app# gcc -g task.c -o task -lm
+```
+root@05e0866c1272:/app# gcc -g task.c -o task -lm
 root@05e0866c1272:/app# valgrind ./task
 ==13== Memcheck, a memory error detector
 ==13== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
@@ -46,4 +47,5 @@ Result: 9.00
 ==13== All heap blocks were freed -- no leaks are possible   
 ==13==
 ==13== For lists of detected and suppressed errors, rerun with: -s
-==13== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)`
+==13== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+```
